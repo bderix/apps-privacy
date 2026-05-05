@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Datenschutzerklärung – VokabelTutor</title>
+</head>
+<body>
+  <h1>Datenschutzerklärung für VokabelTutor</h1>
+
+  <p><strong>Stand: 05.05.2026</strong></p>
+
+  <h2>1. Verantwortlicher</h2>
+  <p>
+    Bernd Deirx<br>
+    Deutschland<br>
+    E-Mail: DEINE EMAIL HIER
+  </p>
+
+  <h2>2. Verarbeitete Daten</h2>
+  <ul>
+    <li>Vokabeln und Lerninhalte</li>
+    <li>Lernfortschritt und Statistiken</li>
+    <li>Audio-Daten (bei Spracheingabe)</li>
+    <li>Technische Nutzungsdaten</li>
+  </ul>
+
+  <h2>3. Zweck</h2>
+  <p>
+    Die Daten werden ausschließlich zur Bereitstellung der App-Funktionen verwendet,
+    insbesondere zum Lernen von Vokabeln und zur Spracheingabe.
+  </p>
+
+  <h2>4. Audio / Mikrofon</h2>
+  <p>
+    Die App verwendet das Mikrofon zur Spracheingabe. Audio wird nur zur
+    Umwandlung in Text verarbeitet.
+  </p>
+
+  <h2>5. Weitergabe</h2>
+  <p>
+    Daten können an technische Dienstleister (z. B. Speech APIs, Backend)
+    übermittelt werden, sofern dies für die Funktion erforderlich ist.
+  </p>
+
+  <h2>6. Löschung</h2>
+  <p>
+    Nutzer können die Löschung ihrer Daten jederzeit per E-Mail anfordern.
+  </p>
+
+</body>
+</html>
