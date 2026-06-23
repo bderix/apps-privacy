@@ -132,7 +132,6 @@
         <a href="SEDatenschutzerklaerung.html">Datenschutz</a>
         <a href="SEImpressum.html">Impressum</a>
         <a href="SEKontoLoeschen.html" aria-current="page">Konto l&ouml;schen</a>
-        <a href="SEAGB.html">AGB</a>
       </nav>
       <h1>Konto und Daten l&ouml;schen</h1>
       <p class="meta">Anleitung f&uuml;r SpeechEditor. Stand: 07.05.2026</p>
@@ -141,9 +140,11 @@
     <main>
       <p>
         SpeechEditor kann ohne klassisches Nutzerkonto verwendet werden. Die App speichert Notizen
-        grunds&auml;tzlich lokal auf dem Ger&auml;t. Wenn kostenpflichtige Funktionen genutzt werden, k&ouml;nnen
-        zus&auml;tzlich pseudonyme Kauf- und Abonnementdaten &uuml;ber RevenueCat und den jeweiligen App Store
-        verarbeitet werden.
+        grunds&auml;tzlich lokal auf dem Ger&auml;t. Wer sich mit einem Google-Konto anmeldet, aktiviert die
+        optionale Cloud-Synchronisierung: Notizen werden dann zus&auml;tzlich verschl&uuml;sselt &uuml;ber Supabase
+        gespeichert, damit sie auf mehreren Ger&auml;ten und nach einer Neuinstallation verf&uuml;gbar bleiben.
+        Wenn kostenpflichtige Funktionen genutzt werden, k&ouml;nnen au&szlig;erdem pseudonyme Kauf- und
+        Abonnementdaten &uuml;ber RevenueCat und den jeweiligen App Store verarbeitet werden.
       </p>
 
       <div class="notice">
@@ -180,9 +181,10 @@
       <h2>Was nach der Anfrage passiert</h2>
       <p>
         Die Anfrage wird gepr&uuml;ft und Daten werden gel&ouml;scht, soweit sie eindeutig zugeordnet werden
-        k&ouml;nnen und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. F&uuml;r Daten, die bei
-        Apple, Google, OpenAI oder RevenueCat verarbeitet werden, kann eine Weiterleitung
-        oder separate Anfrage beim jeweiligen Anbieter erforderlich sein.
+        k&ouml;nnen und keine gesetzlichen Aufbewahrungspflichten entgegenstehen. Zu einem Google-Konto
+        synchronisierte Notizen werden dabei aus der Cloud-Datenbank (Supabase) entfernt. F&uuml;r Daten,
+        die bei Apple, Google, OpenAI, Supabase oder RevenueCat verarbeitet werden, kann eine
+        Weiterleitung oder separate Anfrage beim jeweiligen Anbieter erforderlich sein.
       </p>
 
       <h2>Abonnement k&uuml;ndigen</h2>
