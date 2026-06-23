@@ -137,10 +137,9 @@
         <a href="SEDatenschutzerklaerung.html" aria-current="page">Datenschutz</a>
         <a href="SEImpressum.html">Impressum</a>
         <a href="SEKontoLoeschen.html">Konto l&ouml;schen</a>
-        <a href="SEAGB.html">AGB</a>
       </nav>
       <h1>Datenschutzerkl&auml;rung</h1>
-      <p class="meta">F&uuml;r die Notizblock-App SpeechEditor. Stand: 07.05.2026</p>
+      <p class="meta">F&uuml;r die Notizblock-App SpeechEditor. Stand: 23.06.2026</p>
     </header>
 
     <main>
@@ -174,26 +173,38 @@
         <li>Audioaufnahmen, wenn die Spracheingabe genutzt wird,</li>
         <li>Transkripte, zu korrigierende Texte und zu &uuml;bersetzende Texte,</li>
         <li>technische Ger&auml;te- und Nutzungsdaten, soweit sie f&uuml;r App-Funktionen, Sicherheit oder Fehleranalyse erforderlich sind,</li>
-        <li>Kauf- und Abonnementinformationen, wenn kostenpflichtige Funktionen genutzt werden.</li>
+        <li>Kauf- und Abonnementinformationen, wenn kostenpflichtige Funktionen genutzt werden,</li>
+        <li>bei Anmeldung mit einem Google-Konto: Anmeldeinformationen (z.&nbsp;B. Google-Konto-Kennung und E-Mail-Adresse) sowie die in die Cloud synchronisierten Notizinhalte.</li>
       </ul>
 
-      <h2>3. Lokale Speicherung von Notizen</h2>
+      <h2>3. Lokale Speicherung und optionale Cloud-Synchronisierung</h2>
       <p>
         Notizen werden grunds&auml;tzlich lokal auf dem Ger&auml;t gespeichert. Die App nutzt daf&uuml;r den
-        lokalen App-Speicher des Betriebssystems. Diese lokal gespeicherten Inhalte werden nicht
-        automatisch auf einen eigenen Server des Verantwortlichen synchronisiert.
+        lokalen App-Speicher des Betriebssystems.
+      </p>
+      <p>
+        Wer sich freiwillig mit einem Google-Konto anmeldet, aktiviert die optionale
+        Cloud-Synchronisierung: Notizinhalte, Titel, Tags und Zeitstempel werden dann zus&auml;tzlich
+        &uuml;ber den Dienstleister Supabase (Datenbank-Hosting) gespeichert, damit sie auf mehreren
+        Ger&auml;ten und nach einer Neuinstallation verf&uuml;gbar bleiben. Ohne Anmeldung findet keine
+        &Uuml;bertragung an Supabase statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO
+        (Bereitstellung der gew&uuml;nschten Synchronisierungsfunktion).
       </p>
       <p>
         Lokale Daten k&ouml;nnen durch L&ouml;schen einzelner Notizen, durch Zur&uuml;cksetzen der App-Daten
-        oder durch Deinstallation der App entfernt werden. Eine Deinstallation kann je nach
-        Betriebssystem nicht automatisch alle Daten aus Backups entfernen.
+        oder durch Deinstallation der App entfernt werden. In die Cloud synchronisierte Notizen werden
+        bei einer L&ouml;schung in der App auch aus der Cloud-Datenbank entfernt; eine vollst&auml;ndige
+        Konto- und Datenl&ouml;schung kann zus&auml;tzlich &uuml;ber die in der App verlinkte Seite
+        &bdquo;Konto l&ouml;schen&ldquo; angefordert werden. Eine Deinstallation entfernt nicht
+        automatisch alle Daten aus Backups oder aus der Cloud.
       </p>
 
       <h2>4. Mikrofon und Sprachaufnahme</h2>
       <p>
         Die App fordert Zugriff auf das Mikrofon an, wenn Sprache in Text umgewandelt werden soll.
         Audio wird nur verarbeitet, wenn eine Aufnahme gestartet wird. Zur Transkription wird die
-        Audiodatei an die OpenAI API &uuml;bermittelt. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
+        Audiodatei an den Dienstleister OpenRouter &uuml;bermittelt, der die Verarbeitung an ein
+        Spracherkennungsmodell (Whisper, bereitgestellt &uuml;ber Groq) weiterleitet. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
         DSGVO, soweit die Verarbeitung zur Bereitstellung der gew&uuml;nschten Funktion erforderlich ist,
         sowie Art. 6 Abs. 1 lit. a DSGVO, soweit das Betriebssystem eine Mikrofonfreigabe als
         Einwilligung verlangt.
@@ -232,11 +243,24 @@
       <h2>7. Empf&auml;nger und Dienstleister</h2>
       <p>Zur Bereitstellung einzelner Funktionen k&ouml;nnen Daten an folgende Dienstleister &uuml;bermittelt werden:</p>
       <ul>
-        <li>OpenAI, L.L.C. bzw. verbundene Unternehmen: Transkription von Audio in Text sowie KI-gest&uuml;tzte Korrektur, &Uuml;bersetzung und Stil&auml;nderung,</li>
+        <li>OpenRouter, Inc. bzw. die von OpenRouter eingesetzten Anbieter (u.&nbsp;a. Groq): Transkription von Audio in Text,</li>
+        <li>OpenAI, L.L.C. bzw. verbundene Unternehmen: KI-gest&uuml;tzte Korrektur, &Uuml;bersetzung und Stil&auml;nderung von Text,</li>
+        <li>Supabase, Inc.: Hosting der Datenbank f&uuml;r die optionale Cloud-Synchronisierung von Notizen und f&uuml;r die Kontoanmeldung,</li>
         <li>RevenueCat, Inc.: Verwaltung von In-App-K&auml;ufen, Abonnements und Berechtigungen,</li>
+        <li>Functional Software, Inc. (Sentry): Erfassung von Fehler- und Absturzberichten sowie technischen Diagnose- und Leistungsdaten zur Stabilit&auml;t der App,</li>
+        <li>Google LLC: Anmeldung &uuml;ber das Google-Konto (Google Sign-In),</li>
         <li>Apple App Store bzw. Google Play: Zahlungsabwicklung und Abonnementverwaltung,</li>
         <li>GitHub, Inc.: Hosting dieser statischen Informationsseiten &uuml;ber GitHub Pages.</li>
       </ul>
+
+      <h3>Fehler- und Absturzberichte</h3>
+      <p>
+        Zur Verbesserung der Stabilit&auml;t nutzt die App den Dienst Sentry. Im Fehlerfall werden
+        technische Diagnosedaten (z.&nbsp;B. Fehlermeldungen, Ger&auml;te- und Betriebssysteminformationen,
+        Zeitpunkt) sowie in geringem Umfang Leistungsdaten &uuml;bermittelt. Notizinhalte werden dabei
+        nicht absichtlich erfasst. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes
+        Interesse an einer stabilen und fehlerfreien App).
+      </p>
 
       <h2>8. Drittland&uuml;bermittlungen</h2>
       <p>
@@ -256,6 +280,10 @@
         Abonnementinformationen werden so lange verarbeitet, wie es f&uuml;r die Bereitstellung,
         Wiederherstellung und Abrechnung von K&auml;ufen sowie zur Erf&uuml;llung gesetzlicher Pflichten
         erforderlich ist.
+      </p>
+      <p>
+        In die Cloud synchronisierte Notizen bleiben in der Cloud-Datenbank gespeichert, bis sie
+        durch den Nutzer gel&ouml;scht werden oder das Konto gel&ouml;scht wird.
       </p>
 
       <h2>10. Rechtsgrundlagen</h2>
@@ -299,8 +327,11 @@
         auf deren Seiten:
       </p>
       <ul>
+        <li><a href="https://openrouter.ai/privacy" rel="noopener">OpenRouter Privacy Policy</a></li>
         <li><a href="https://openai.com/policies/api-data-usage-policies" rel="noopener">OpenAI Enterprise Privacy / API Platform</a></li>
+        <li><a href="https://supabase.com/privacy" rel="noopener">Supabase Privacy Policy</a></li>
         <li><a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat Privacy Policy</a></li>
+        <li><a href="https://sentry.io/privacy/" rel="noopener">Sentry Privacy Policy</a></li>
         <li><a href="https://docs.github.com/de/pages" rel="noopener">GitHub Pages Dokumentation</a></li>
       </ul>
 
