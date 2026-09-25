@@ -140,7 +140,7 @@
         <a href="SEKontoLoeschen.html">Konto l&ouml;schen</a>
       </nav>
       <h1>Datenschutzerkl&auml;rung</h1>
-      <p class="meta">F&uuml;r die Notizblock-App SpeechEditor. Stand: 01.08.2026</p>
+      <p class="meta">F&uuml;r die Notizblock-App SpeechEditor. Stand: 25.09.2026</p>
     </header>
 
     <main>
@@ -199,8 +199,9 @@
       <p>
         Die App fordert Zugriff auf das Mikrofon an, wenn Sprache in Text umgewandelt werden soll.
         Audio wird nur verarbeitet, wenn eine Aufnahme gestartet wird. Zur Transkription wird die
-        Audiodatei an den Dienstleister OpenRouter &uuml;bermittelt, der die Verarbeitung an ein
-        Spracherkennungsmodell (Whisper, bereitgestellt &uuml;ber Groq) weiterleitet. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
+        Audiodatei an einen Dienstleister &uuml;bermittelt und dort von einem Spracherkennungsmodell
+        (Whisper) in Text umgewandelt: standardm&auml;&szlig;ig an Cloudflare (Workers AI), alternativ an
+        OpenRouter, das die Verarbeitung an einen Modellanbieter (u.&nbsp;a. Groq) weiterleitet. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
         DSGVO, soweit die Verarbeitung zur Bereitstellung der gew&uuml;nschten Funktion erforderlich ist,
         sowie Art. 6 Abs. 1 lit. a DSGVO, soweit das Betriebssystem eine Mikrofonfreigabe als
         Einwilligung verlangt.
@@ -212,10 +213,11 @@
 
       <h2>5. KI-Korrektur, &Uuml;bersetzung und Stil&auml;nderung</h2>
       <p>
-        Wenn die Funktionen zur Korrektur, &Uuml;bersetzung oder Stil&auml;nderung genutzt werden, wird der
-        ausgew&auml;hlte Text an die OpenAI API &uuml;bermittelt und dort vom jeweils konfigurierten
-        KI-Modell verarbeitet. Die Verarbeitung ist erforderlich, um das gew&uuml;nschte Ergebnis zu
-        erzeugen.
+        Wenn die KI-Funktionen zur Textbearbeitung genutzt werden (z.&nbsp;B. Aufr&auml;umen, Korrektur,
+        &Uuml;bersetzung, Stil&auml;nderung oder Vorschl&auml;ge f&uuml;r Titel und Emojis), wird der betroffene Text an
+        den Dienstleister OpenRouter &uuml;bermittelt, der ihn an den Anbieter des jeweils konfigurierten
+        KI-Modells (derzeit OpenAI) weiterleitet, wo er verarbeitet wird. Die Verarbeitung ist
+        erforderlich, um das gew&uuml;nschte Ergebnis zu erzeugen.
       </p>
       <p>
         Nutzer sollten keine sensiblen Informationen, vertraulichen Inhalte, Gesundheitsdaten,
@@ -239,8 +241,9 @@
       <h2>7. Empf&auml;nger und Dienstleister</h2>
       <p>Zur Bereitstellung einzelner Funktionen k&ouml;nnen Daten an folgende Dienstleister &uuml;bermittelt werden:</p>
       <ul>
-        <li>OpenRouter, Inc. bzw. die von OpenRouter eingesetzten Anbieter (u.&nbsp;a. Groq): Transkription von Audio in Text,</li>
-        <li>OpenAI, L.L.C. bzw. verbundene Unternehmen: KI-gest&uuml;tzte Korrektur, &Uuml;bersetzung und Stil&auml;nderung von Text,</li>
+        <li>Cloudflare, Inc. (Workers AI): Transkription von Audio in Text,</li>
+        <li>OpenRouter, Inc. bzw. die von OpenRouter eingesetzten Modellanbieter (u.&nbsp;a. Groq): Transkription von Audio in Text sowie Weiterleitung von Texten an KI-Modelle f&uuml;r die KI-gest&uuml;tzte Textbearbeitung,</li>
+        <li>OpenAI, L.L.C. bzw. verbundene Unternehmen, angebunden &uuml;ber OpenRouter: KI-gest&uuml;tzte Textbearbeitung (u.&nbsp;a. Korrektur, &Uuml;bersetzung und Stil&auml;nderung),</li>
         <li>Supabase, Inc.: Hosting der Datenbank f&uuml;r die optionale Cloud-Synchronisierung von Notizen und f&uuml;r die Kontoanmeldung,</li>
         <li>RevenueCat, Inc.: Verwaltung von In-App-K&auml;ufen, Abonnements und Berechtigungen,</li>
         <li>Functional Software, Inc. (Sentry): Erfassung von Fehler- und Absturzberichten sowie technischen Diagnose- und Leistungsdaten zur Stabilit&auml;t der App,</li>
@@ -323,6 +326,7 @@
         auf deren Seiten:
       </p>
       <ul>
+        <li><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare Privacy Policy</a></li>
         <li><a href="https://openrouter.ai/privacy" rel="noopener">OpenRouter Privacy Policy</a></li>
         <li><a href="https://openai.com/policies/api-data-usage-policies" rel="noopener">OpenAI Enterprise Privacy / API Platform</a></li>
         <li><a href="https://supabase.com/privacy" rel="noopener">Supabase Privacy Policy</a></li>
