@@ -140,7 +140,7 @@
         <a href="SEKontoLoeschen.html">Konto l&ouml;schen</a>
       </nav>
       <h1>Datenschutzerkl&auml;rung</h1>
-      <p class="meta">F&uuml;r die Notizblock-App SpeechEditor. Stand: 25.09.2026</p>
+      <p class="meta">F&uuml;r die Notizblock-App SpeechEditor. Stand: 12.11.2026</p>
     </header>
 
     <main>
@@ -189,8 +189,9 @@
       <p>
         Lokale Daten k&ouml;nnen durch L&ouml;schen einzelner Notizen, durch Zur&uuml;cksetzen der App-Daten
         oder durch Deinstallation der App entfernt werden. In die Cloud synchronisierte Notizen werden
-        bei einer L&ouml;schung in der App auch aus der Cloud-Datenbank entfernt; eine vollst&auml;ndige
-        Konto- und Datenl&ouml;schung kann zus&auml;tzlich &uuml;ber die in der App verlinkte Seite
+        bei einer L&ouml;schung in der App auch aus der Cloud-Datenbank entfernt. Eine vollst&auml;ndige
+        Konto- und Datenl&ouml;schung ist direkt in der App m&ouml;glich (Einstellungen &gt;
+        &bdquo;Konto l&ouml;schen&ldquo;) und kann zus&auml;tzlich &uuml;ber die in der App verlinkte Seite
         &bdquo;Konto l&ouml;schen&ldquo; angefordert werden. Eine Deinstallation entfernt nicht
         automatisch alle Daten aus Backups oder aus der Cloud.
       </p>
@@ -201,7 +202,7 @@
         Audio wird nur verarbeitet, wenn eine Aufnahme gestartet wird. Zur Transkription wird die
         Audiodatei an einen Dienstleister &uuml;bermittelt und dort von einem Spracherkennungsmodell
         (Whisper) in Text umgewandelt: standardm&auml;&szlig;ig an Cloudflare (Workers AI), alternativ an
-        OpenRouter, das die Verarbeitung an einen Modellanbieter (u.&nbsp;a. Groq) weiterleitet. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
+        OpenRouter, das die Verarbeitung an einen Modellanbieter (u.&nbsp;a. Groq oder Microsoft) weiterleitet. Die Rechtsgrundlage ist Art. 6 Abs. 1 lit. b
         DSGVO, soweit die Verarbeitung zur Bereitstellung der gew&uuml;nschten Funktion erforderlich ist,
         sowie Art. 6 Abs. 1 lit. a DSGVO, soweit das Betriebssystem eine Mikrofonfreigabe als
         Einwilligung verlangt.
@@ -209,6 +210,13 @@
       <p>
         Der Mikrofonzugriff kann jederzeit in den Systemeinstellungen des Ger&auml;ts entzogen werden.
         Ohne Mikrofonfreigabe kann die Spracheingabe nicht genutzt werden.
+      </p>
+      <p>
+        Auf Android-Ger&auml;ten steht im Editor zus&auml;tzlich die im Betriebssystem integrierte
+        Spracherkennung zur Verf&uuml;gung. Wird sie genutzt, verarbeitet der auf dem Ger&auml;t
+        eingerichtete Spracherkennungsdienst (in der Regel Google) die gesprochene Sprache &ndash; je nach
+        Ger&auml;teeinstellung auf dem Ger&auml;t selbst oder auf Servern des jeweiligen Anbieters. Die App
+        erh&auml;lt dabei nur den erkannten Text und speichert keine Audiodaten.
       </p>
 
       <h2>5. KI-Korrektur, &Uuml;bersetzung und Stil&auml;nderung</h2>
@@ -242,12 +250,13 @@
       <p>Zur Bereitstellung einzelner Funktionen k&ouml;nnen Daten an folgende Dienstleister &uuml;bermittelt werden:</p>
       <ul>
         <li>Cloudflare, Inc. (Workers AI): Transkription von Audio in Text,</li>
-        <li>OpenRouter, Inc. bzw. die von OpenRouter eingesetzten Modellanbieter (u.&nbsp;a. Groq): Transkription von Audio in Text sowie Weiterleitung von Texten an KI-Modelle f&uuml;r die KI-gest&uuml;tzte Textbearbeitung,</li>
+        <li>OpenRouter, Inc. bzw. die von OpenRouter eingesetzten Modellanbieter (u.&nbsp;a. Groq, Microsoft): Transkription von Audio in Text sowie Weiterleitung von Texten an KI-Modelle f&uuml;r die KI-gest&uuml;tzte Textbearbeitung,</li>
         <li>OpenAI, L.L.C. bzw. verbundene Unternehmen, angebunden &uuml;ber OpenRouter: KI-gest&uuml;tzte Textbearbeitung (u.&nbsp;a. Korrektur, &Uuml;bersetzung und Stil&auml;nderung),</li>
         <li>Supabase, Inc.: Hosting der Datenbank f&uuml;r die optionale Cloud-Synchronisierung von Notizen und f&uuml;r die Kontoanmeldung,</li>
         <li>RevenueCat, Inc.: Verwaltung von In-App-K&auml;ufen, Abonnements und Berechtigungen,</li>
         <li>Functional Software, Inc. (Sentry): Erfassung von Fehler- und Absturzberichten sowie technischen Diagnose- und Leistungsdaten zur Stabilit&auml;t der App,</li>
-        <li>Google LLC: Anmeldung &uuml;ber das Google-Konto (Google Sign-In),</li>
+        <li>Google LLC: Anmeldung &uuml;ber das Google-Konto (Google Sign-In) sowie, je nach Ger&auml;t, die im Betriebssystem integrierte Spracherkennung,</li>
+        <li>650 Industries, Inc. (Expo): Auslieferung von App-Aktualisierungen; beim Start pr&uuml;ft die App, ob eine neuere Fassung der App-Inhalte vorliegt, wobei technische Verbindungsdaten (z.&nbsp;B. IP-Adresse, App-Version) verarbeitet werden,</li>
         <li>Google Play: Zahlungsabwicklung und Abonnementverwaltung,</li>
         <li>GitHub, Inc.: Hosting dieser statischen Informationsseiten &uuml;ber GitHub Pages.</li>
       </ul>
@@ -332,6 +341,7 @@
         <li><a href="https://supabase.com/privacy" rel="noopener">Supabase Privacy Policy</a></li>
         <li><a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat Privacy Policy</a></li>
         <li><a href="https://sentry.io/privacy/" rel="noopener">Sentry Privacy Policy</a></li>
+        <li><a href="https://expo.dev/privacy" rel="noopener">Expo Privacy Policy</a></li>
         <li><a href="https://docs.github.com/de/pages" rel="noopener">GitHub Pages Dokumentation</a></li>
       </ul>
 
